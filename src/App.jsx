@@ -10,6 +10,7 @@ import Home from "./scenes/home";
 import About from "./scenes/about";
 import Faq from "./scenes/help/Faq";
 import Contact from "./scenes/help/contact";
+import NotFound from "./scenes/notFound";
 
 // layouts
 import RootLayout from "./layouts/RootLayout";
@@ -24,6 +25,9 @@ const router = createBrowserRouter(
         <Route path="faq" element={<Faq />} />
         <Route path="contact" element={<Contact />} />
       </Route>
+
+      {/* ERROR HANDLING - CATCH ALL */}
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
